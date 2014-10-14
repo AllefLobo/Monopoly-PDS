@@ -1,34 +1,35 @@
 package TestePensamento;
 
 public class Jogador {
-	private String nome;
-	private Peca peca;
-	private Tabuleiro tabuleiro;
-	private Dado[] dados;
 	
-	public Jogador(String nome, Dado[] dados, Tabuleiro tabuleiro) {
-		this.nome = nome;
-		this.dados = dados;
-		this.tabuleiro = tabuleiro;
-		peca = new Peca(tabuleiro.obterCasaInicial());
+	String nome;
+	Double saldoDaConta;
+	Peca peca;
+	
+	public Jogador(String nomeDeJogador, Double saldoInicial, Peca peca) {
+		this.nome = nomeDeJogador;
+		this.saldoDaConta = saldoInicial;
+		this.peca = peca;
 	}
 	
-	public void assumaAVez(){
-		int totalDoLancamento = 0;
-		for(int i=0; i < dados.length; i++){
-			dados[i].lancar();
-			totalDoLancamento += dados[i].obterValorDaFace();
-		}
-		Casa novaLoc = tabuleiro.obterCasa(peca.obterLocalizacao(), totalDoLancamento);
-		peca.estabelecerLocalizacao(novaLoc);
-	}
-	
-	public Casa obterLocalizacao(){
-		return peca.obterLocalizacao();
-	}
-	
-	public String obterNome(){
+	public String getNome(){
 		return nome;
+	}
+	
+	public void setNome(String novoNome){
+		this.nome = novoNome;
+	}
+	
+	public Double getSaldoDaConta(){
+		return this.saldoDaConta;
+	}
+	
+	public void debitar(double valor){
+		this.saldoDaConta = saldoDaConta - valor;
+	}
+	
+	public void creditar(double valor){
+		this.saldoDaConta = saldoDaConta + valor;
 	}
 	
 	
