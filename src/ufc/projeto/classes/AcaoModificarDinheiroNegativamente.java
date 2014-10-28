@@ -18,7 +18,11 @@ public class AcaoModificarDinheiroNegativamente extends AcaoModificarDinheiro{
     
     @Override
     public void AcaoASerRealizada(Jogador jogador) {
-        jogador.debitar(this.getValor());
+    	if(jogador.getDinheiro() >= getValor()){
+    		jogador.debitar(this.getValor());
+    	}else{
+    		//levantar excecao, falta de dinheiro
+    	}
     }
     
 }

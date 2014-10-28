@@ -21,9 +21,4 @@ public class AcaoMoverJogador extends AcoesLogradourosEspeciais{
     public void AcaoASerRealizada(Jogador jogador) {
         jogador.setPosicaoAtual(posicaoParaMover);
     }
-
-    public int getPosicao() {
-        return posicaoParaMover;
-    }
-    
 }

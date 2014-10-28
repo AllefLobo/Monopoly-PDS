@@ -18,21 +18,21 @@ public class Jogador {
     private List<LogradourosAdquiriveis> logradourosAdquiridos;
     private int valorDados;
     private int posicaoAtual;
-    private final Tabuleiro tabuleiro;
+    private final int totalDeCasas;
     
-    public Jogador(double dinheiro, String nome, Tabuleiro tabuleiro) {
+    public Jogador(double dinheiro, String nome, int totalDeCasas) {
         this.dinheiro = dinheiro;
         this.nome = nome;
         this.valorDados = 0;
         this.posicaoAtual = 0;
-        this.tabuleiro = tabuleiro;
+        this.totalDeCasas = totalDeCasas;
     }
     
-    private int retornandoPosicaoCircular(int numeroDados){
-        int totalDePosicoes = tabuleiro.numeroDeLogradouros();
-        int totalAndar = this.getPosicaoAtual()+numeroDados;
+    private int retornandoPosicaoCorretaNoTabuleiro(int numeroDados){
+        int totalDePosicoes = totalDeCasas;
+        int posicaoAtual = this.getPosicaoAtual()+numeroDados;
         
-        return totalAndar%totalDePosicoes;
+        return posicaoAtual%totalDePosicoes;
     }
 
     public void atualizarValorDados(int valorDados) {
@@ -55,8 +55,8 @@ public class Jogador {
         return valorDados;
     }
     
-    public void setPosicaoAtual(int numeroDePulos){
-        this.posicaoAtual = retornandoPosicaoCircular(numeroDePulos);
+    public void setPosicaoAtual(int numeroDoDado){
+        this.posicaoAtual = retornandoPosicaoCorretaNoTabuleiro(numeroDoDado);
     }
     
     public int getPosicaoAtual(){
@@ -69,10 +69,6 @@ public class Jogador {
     
     public String getNome() {
         return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public List<LogradourosAdquiriveis> getLogradourosAdquiridos() {

@@ -18,11 +18,16 @@ public class Empresa extends LogradourosAdquiriveis{
 
     @Override
     public void realizarAcao(Jogador jogador) {
-        if(isPropriedadeAdquirida()){
+      
+    	if(isPropriedadeAdquirida()){
             if(!jogador.equals(getProprietario())){
                 double valorCobrarAdquirir = getTaxa()*jogador.getValorDados();
-                jogador.debitar(valorCobrarAdquirir);
-                getProprietario().creditar(valorCobrarAdquirir);
+                if(jogador.getDinheiro() >= valorCobrarAdquirir){
+                	jogador.debitar(valorCobrarAdquirir);
+                	getProprietario().creditar(valorCobrarAdquirir);
+                }else{
+                	//levanta exception, jogar sem dinheiro
+                }
             }else{
                 //retorna excessao
             }

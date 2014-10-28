@@ -16,7 +16,7 @@ public class LogradourosEspeciais extends Logradouros{
     private List<AcoesLogradourosEspeciais> listaAcoes;
     
     public LogradourosEspeciais(String nome, String descricao, List<AcoesLogradourosEspeciais> listaAcoes) {
-        super(nome, descricao);
+        super(nome, descricao, false);
         this.listaAcoes = listaAcoes;
     }
     

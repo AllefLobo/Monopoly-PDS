@@ -16,7 +16,7 @@ public abstract class LogradourosAdquiriveis extends Logradouros{
     private Jogador proprietario;
     
     public LogradourosAdquiriveis(String nome, String descricao, double preco, double taxa) {
-        super(nome, descricao);
+        super(nome, descricao, true);
         this.preco = preco;
         this.taxa = taxa;
     }
@@ -27,9 +27,13 @@ public abstract class LogradourosAdquiriveis extends Logradouros{
     
     public void adquirirPropriedade(Jogador jogador){
         if(!isPropriedadeAdquirida()){
-            jogador.debitar(getPreco());
-            jogador.adicionarLogradouro(this);
-            setProprietario(jogador);
+        	if(jogador.getDinheiro() >= getPreco()){
+        		jogador.debitar(getPreco());
+        		jogador.adicionarLogradouro(this);
+        		setProprietario(jogador);
+        	}else{
+        		//levantar exception
+        	}
         }else{
             //levantar excecao
         }

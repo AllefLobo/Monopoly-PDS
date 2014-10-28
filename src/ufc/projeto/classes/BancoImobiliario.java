@@ -13,6 +13,6 @@ package ufc.projeto.classes;
 public interface BancoImobiliario {
     
     public void jogarAVez(int numeroDados);
-    public Logradouros getInformacaoEscolhido(int posicao);
+    public Logradouros getInformacaoLogradoEscolhido(int posicao);
    
 }

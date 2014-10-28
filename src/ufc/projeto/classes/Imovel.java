@@ -18,16 +18,18 @@ public class Imovel extends LogradourosAdquiriveis{
 
     @Override
     public void realizarAcao(Jogador jogador) {
-        
-        if(isPropriedadeAdquirida()){
+       
+    	if(isPropriedadeAdquirida()){
             if(!jogador.equals(getProprietario())){
-                jogador.debitar(getTaxa());
-                getProprietario().creditar(getTaxa());
-            }else{
-               //retorna excessao
+            	if(jogador.getDinheiro() >= getTaxa()){
+            		jogador.debitar(getTaxa());
+                	getProprietario().creditar(getTaxa());
+            	}else{
+            		//levanta excessao, jogo terminado
+            	}
             }
         }else{
-            //retorna a excessao
+            //retorna a excessao, propriedade adquirida
         }
     }
 }

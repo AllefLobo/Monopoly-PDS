@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package ufc.projeto.classes;
 
 import java.util.List;
@@ -23,46 +22,59 @@ public class ImpleBancoImobiliario implements BancoImobiliario{
         this.tabuleiro = tabuleiro;
         this.acoesDoJogo = acoesDoJogo;
         jogadorDestaVez = listaJogadores.get(0);
+        acoesDoJogo.mudarJogadores(jogadorDestaVez);
     }
-    
-    //DUVIDA EM COMO RECONHECER CADA COISA COMO SENDO CADA TIPO DE LOGRADOURO
-    //ULTILIZAR AS EXCESSOES FALTA DE DINHEIRO, PARA CHAMAR O EVENTO jogoTerminado na classe AcoesDoJogo
    
     public void jogarAVez(int numeroDados){
+    	//mudando posicao do jogador
         jogadorDestaVez.setPosicaoAtual(numeroDados);
-        Logradouros logradouroAtual = getInformacaoEscolhido(jogadorDestaVez.getPosicaoAtual());
         
-        //if for compravel fazer a pergunta
-        boolean resposta = acoesDoJogo.aceitaCompra();
+        //mandando um sinal para interface mudar o jogador
+        acoesDoJogo.andarCasas(jogadorDestaVez);
         
-        //hipoteticamente é compravel, logo faz-se a compra
+        //obtendo o logradouro
+        Logradouros logradouroAtual = getInformacaoLogradoEscolhido(jogadorDestaVez.getPosicaoAtual());
         
-        ((LogradourosAdquiriveis)logradouroAtual).adquirirPropriedade(jogadorDestaVez);
-        
-        //if nao for compravel passar direto
-        //logo depois, se ele ja for o dono, nao fazer nada, mas se já existir dono realizar acão sobre o que caiu
-        //entao pode se usar logo o recurso abaixo;
-        
-        ((LogradourosEspeciais)logradouroAtual).realizarAcao(jogadorDestaVez);
-        //se ocorrer o uso desse metodo atualizar as casas na interface, pois pode ter ocorrido mudança na posicao do jogador
-        
-        //por fim passasse a vez para o outro jogador
-        mudarVezJogador();
-        //evento para atualizar a tela
-        acoesDoJogo.andarCasas(jogadorDestaVez.getPosicaoAtual(), jogadorDestaVez);
+        //verificando se o logradouro é adquirivel
+        if(logradouroAtual.isAdquirivel()){
+        	
+        	//verificando se a propriedade já está adquirida
+        	if(!((LogradourosAdquiriveis) logradouroAtual).isPropriedadeAdquirida()){
+        		 boolean resposta = acoesDoJogo.aceitaCompra();
+        		 if(resposta){
+        			 ((LogradourosAdquiriveis) logradouroAtual).adquirirPropriedade(jogadorDestaVez);
+        		 }
+        	}else{
+        		//realizando a ação do logradouro
+        		logradouroAtual.realizarAcao(jogadorDestaVez);
+        	}
+        }else{
+        		//se não for adquirivel ele apenas realiza a ação encima do jogador
+        		logradouroAtual.realizarAcao(jogadorDestaVez);
+        }
+
+        //ação chamada a interface, pois pode ocorrer do jogador ter se movido
+		acoesDoJogo.andarCasas(jogadorDestaVez);
+		
+		//chamada a interface para que os campos sejam atualizados
         acoesDoJogo.atualizarJogo(listaJogadores);
+        
+        //mudando a vez do jogador
+        mudarVezJogador();
     }   
-    
- 
-    public Logradouros getInformacaoEscolhido(int posicao){
-        return tabuleiro.getLogradouroEspecifico(posicao);
-    }
    
+    //mudança na vez do jogador
     private void mudarVezJogador(){
         int posicaoDoAtualJogadorDaVezNaLista = listaJogadores.indexOf(jogadorDestaVez);
         int proximaPosicao = posicaoDoAtualJogadorDaVezNaLista+1;
         jogadorDestaVez = listaJogadores.get(proximaPosicao/listaJogadores.size());
+        acoesDoJogo.mudarJogadores(jogadorDestaVez);
     }
+
+    //busca um logradouro em especifico
+	public Logradouros getInformacaoLogradoEscolhido(int posicao) {
+		return tabuleiro.getLogradouroEspecifico(posicao);
+	}
         
     
 }

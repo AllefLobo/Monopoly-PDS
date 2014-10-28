@@ -13,10 +13,18 @@ package ufc.projeto.classes;
 public abstract class Logradouros {
         private String nome;
         private String descricao;
+        private boolean adquirivel;
 
-    public Logradouros(String nome, String descricao) {
+    public Logradouros(String nome, String descricao, boolean adquirivel) {
         this.nome = nome;
         this.descricao = descricao;
+        this.adquirivel = adquirivel;
     }  
-        public abstract void realizarAcao(Jogador jogador);
+   
+    public boolean isAdquirivel(){
+    		return this.adquirivel;
+   	}
+
+    public abstract void realizarAcao(Jogador jogador);
+
 }

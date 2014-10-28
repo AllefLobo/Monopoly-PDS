@@ -6,11 +6,16 @@
 
 package ufc.projeto.gui;
 
+import java.util.List;
+
+import ufc.projeto.classes.AcoesDoJogo;
+import ufc.projeto.classes.Jogador;
+
 /**
  *
  * @author S2
  */
-public class Principal extends javax.swing.JFrame {
+public class Principal extends javax.swing.JFrame{
 
     /**
      * Creates new form Principal
@@ -148,4 +153,26 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     // End of variables declaration//GEN-END:variables
+	
+ 
+
+	public void jogoTerminado(Jogador vencedor) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void atualizarJogo(List<Jogador> listaJogadores) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public boolean aceitaCompra() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public void andarCasas(Jogador jogador) {
+		// TODO Auto-generated method stub
+		
+	}
 }
