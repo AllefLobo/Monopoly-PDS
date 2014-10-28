@@ -27,7 +27,7 @@ public class ImpleBancoImobiliario implements BancoImobiliario{
     
     //DUVIDA EM COMO RECONHECER CADA COISA COMO SENDO CADA TIPO DE LOGRADOURO
     //ULTILIZAR AS EXCESSOES FALTA DE DINHEIRO, PARA CHAMAR O EVENTO jogoTerminado na classe AcoesDoJogo
-    @Override
+   
     public void jogarAVez(int numeroDados){
         jogadorDestaVez.setPosicaoAtual(numeroDados);
         Logradouros logradouroAtual = getInformacaoEscolhido(jogadorDestaVez.getPosicaoAtual());
@@ -53,7 +53,7 @@ public class ImpleBancoImobiliario implements BancoImobiliario{
         acoesDoJogo.atualizarJogo(listaJogadores);
     }   
     
-    @Override
+ 
     public Logradouros getInformacaoEscolhido(int posicao){
         return tabuleiro.getLogradouroEspecifico(posicao);
     }
