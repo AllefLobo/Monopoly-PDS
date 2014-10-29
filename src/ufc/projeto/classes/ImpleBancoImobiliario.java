@@ -25,7 +25,7 @@ public class ImpleBancoImobiliario implements BancoImobiliario{
         acoesDoJogo.mudarJogadores(jogadorDestaVez);
     }
    
-    public void jogarAVez(int numeroDados){
+    public void jogarAVez(int numeroDados) throws LNPSAException{
     	//mudando posicao do jogador
         jogadorDestaVez.setPosicaoAtual(numeroDados);
         
@@ -39,10 +39,10 @@ public class ImpleBancoImobiliario implements BancoImobiliario{
         if(logradouroAtual.isAdquirivel()){
         	
         	//verificando se a propriedade já está adquirida
-        	if(!((LogradourosAdquiriveis) logradouroAtual).isPropriedadeAdquirida()){
+        	if(!logradouroAtual.isPropriedadeAdquirida()){
         		 boolean resposta = acoesDoJogo.aceitaCompra();
         		 if(resposta){
-        			 ((LogradourosAdquiriveis) logradouroAtual).adquirirPropriedade(jogadorDestaVez);
+        			 logradouroAtual.adquirirPropriedade(jogadorDestaVez);
         		 }
         	}else{
         		//realizando a ação do logradouro

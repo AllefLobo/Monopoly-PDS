@@ -12,7 +12,7 @@ package ufc.projeto.classes;
  */
 public interface BancoImobiliario {
     
-    public void jogarAVez(int numeroDados);
+    public void jogarAVez(int numeroDados) throws LNPSAException;
     public Logradouros getInformacaoLogradoEscolhido(int posicao);
    
 }

@@ -26,5 +26,7 @@ public abstract class Logradouros {
    	}
 
     public abstract void realizarAcao(Jogador jogador);
+    public abstract void adquirirPropriedade(Jogador jogador) throws LNPSAException;
+    public abstract boolean isPropriedadeAdquirida() throws LNPSAException;
 
 }

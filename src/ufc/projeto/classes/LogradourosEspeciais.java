@@ -25,5 +25,15 @@ public class LogradourosEspeciais extends Logradouros{
         for(AcoesLogradourosEspeciais lista : listaAcoes)
             lista.AcaoASerRealizada(jogador);
     }
+
+	@Override
+	public void adquirirPropriedade(Jogador jogador) throws LNPSAException {
+		throw new LNPSAException();
+	}
+
+	@Override
+	public boolean isPropriedadeAdquirida() throws LNPSAException {
+		throw new LNPSAException();
+	}
     
 }

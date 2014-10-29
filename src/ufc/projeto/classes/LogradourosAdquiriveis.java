@@ -21,6 +21,7 @@ public abstract class LogradourosAdquiriveis extends Logradouros{
         this.taxa = taxa;
     }
     
+    @Override
     public boolean isPropriedadeAdquirida(){
         return proprietario != null;
     }
