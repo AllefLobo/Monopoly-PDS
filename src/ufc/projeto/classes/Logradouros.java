@@ -24,8 +24,16 @@ public abstract class Logradouros {
     public boolean isAdquirivel(){
     		return this.adquirivel;
    	}
+    
+    public String getNome(){
+    	return this.nome;
+    }
+    
+    public String getDescriao(){
+    	return this.descricao;
+    }
 
-    public abstract void realizarAcao(Jogador jogador);
+    public abstract void realizarAcao(Jogador jogador) throws JSDException, PJAException;
     public abstract void adquirirPropriedade(Jogador jogador) throws LNPSAException;
     public abstract boolean isPropriedadeAdquirida() throws LNPSAException;
 

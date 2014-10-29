@@ -21,7 +21,7 @@ public class LogradourosEspeciais extends Logradouros{
     }
     
     @Override
-    public void realizarAcao(Jogador jogador) {
+    public void realizarAcao(Jogador jogador) throws JSDException {
         for(AcoesLogradourosEspeciais lista : listaAcoes)
             lista.AcaoASerRealizada(jogador);
     }

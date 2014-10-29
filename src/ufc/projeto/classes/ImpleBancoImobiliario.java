@@ -25,7 +25,7 @@ public class ImpleBancoImobiliario implements BancoImobiliario{
         acoesDoJogo.mudarJogadores(jogadorDestaVez);
     }
    
-    public void jogarAVez(int numeroDados) throws LNPSAException{
+    public void jogarAVez(int numeroDados) throws LNPSAException, JSDException, PJAException{
     	//mudando posicao do jogador
         jogadorDestaVez.setPosicaoAtual(numeroDados);
         

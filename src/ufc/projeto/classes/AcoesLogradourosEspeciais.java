@@ -11,5 +11,5 @@ package ufc.projeto.classes;
  * @author S2
  */
 public abstract class AcoesLogradourosEspeciais {
-    public abstract void AcaoASerRealizada(Jogador jogador);
+    public abstract void AcaoASerRealizada(Jogador jogador) throws JSDException;
 }

@@ -17,25 +17,24 @@ public class Empresa extends LogradourosAdquiriveis{
     }
 
     @Override
-    public void realizarAcao(Jogador jogador) {
+    public void realizarAcao(Jogador jogador) throws JSDException, PJAException {
       
     	if(isPropriedadeAdquirida()){
-            if(!jogador.equals(getProprietario())){
-                double valorCobrarAdquirir = getTaxa()*jogador.getValorDados();
+            
+    		if(!jogador.equals(getProprietario())){
+               
+            	double valorCobrarAdquirir = getTaxa()*jogador.getValorDados();
                 if(jogador.getDinheiro() >= valorCobrarAdquirir){
                 	jogador.debitar(valorCobrarAdquirir);
                 	getProprietario().creditar(valorCobrarAdquirir);
-                }else{
-                	//levanta exception, jogar sem dinheiro
-                }
-            }else{
-                //retorna excessao
-            }
+                }else
+                	throw new JSDException();
         }else{
-            //retorna erro de propriedade ja adquirida, mudar pra excessao
+        	throw new PJAException();
         }
     }
 
   
     
+}
 }
