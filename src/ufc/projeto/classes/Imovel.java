@@ -17,11 +17,11 @@ public class Imovel extends LogradourosAdquiriveis{
     }
 
     @Override
-    public void realizarAcao(Jogador jogador) throws PJAException, JSDException {
+    public void realizarAcao(ImpleJogador jogador) throws PJAException, JSDException {
        
     	if(isPropriedadeAdquirida()){
             if(!jogador.equals(getProprietario())){
-            	if(jogador.getDinheiro() >= getTaxa()){
+            	if(jogador.getSaldo() >= getTaxa()){
             		jogador.debitar(getTaxa());
                 	getProprietario().creditar(getTaxa());
             	}else{

@@ -13,7 +13,7 @@ package ufc.projeto.classes;
 public abstract class LogradourosAdquiriveis extends Logradouros{
     private double preco;
     private double taxa;
-    private Jogador proprietario;
+    private ImpleJogador proprietario;
     
     public LogradourosAdquiriveis(String nome, String descricao, double preco, double taxa) {
         super(nome, descricao, true);
@@ -26,17 +26,17 @@ public abstract class LogradourosAdquiriveis extends Logradouros{
         return proprietario != null;
     }
     
-    public void adquirirPropriedade(Jogador jogador){
+    public void adquirirPropriedade(ImpleJogador jogador) throws JSDException, PJAException{
         if(!isPropriedadeAdquirida()){
-        	if(jogador.getDinheiro() >= getPreco()){
+        	if(jogador.getSaldo() >= getPreco()){
         		jogador.debitar(getPreco());
         		jogador.adicionarLogradouro(this);
         		setProprietario(jogador);
         	}else{
-        		//levantar exception
+        		throw new JSDException();
         	}
         }else{
-            //levantar excecao
+            throw new PJAException();
         }
     }
     
@@ -48,11 +48,11 @@ public abstract class LogradourosAdquiriveis extends Logradouros{
         return this.taxa;
     }
     
-    public void setProprietario(Jogador proprietario){
+    public void setProprietario(ImpleJogador proprietario){
         this.proprietario = proprietario;
     }
     
-    public Jogador getProprietario(){
+    public ImpleJogador getProprietario(){
         return this.proprietario;
     }
 }

@@ -17,14 +17,14 @@ public class Empresa extends LogradourosAdquiriveis{
     }
 
     @Override
-    public void realizarAcao(Jogador jogador) throws JSDException, PJAException {
+    public void realizarAcao(ImpleJogador jogador) throws JSDException, PJAException {
       
     	if(isPropriedadeAdquirida()){
             
     		if(!jogador.equals(getProprietario())){
                
             	double valorCobrarAdquirir = getTaxa()*jogador.getValorDados();
-                if(jogador.getDinheiro() >= valorCobrarAdquirir){
+                if(jogador.getSaldo() >= valorCobrarAdquirir){
                 	jogador.debitar(valorCobrarAdquirir);
                 	getProprietario().creditar(valorCobrarAdquirir);
                 }else

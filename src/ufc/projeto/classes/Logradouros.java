@@ -33,8 +33,8 @@ public abstract class Logradouros {
     	return this.descricao;
     }
 
-    public abstract void realizarAcao(Jogador jogador) throws JSDException, PJAException;
-    public abstract void adquirirPropriedade(Jogador jogador) throws LNPSAException;
+    public abstract void realizarAcao(ImpleJogador jogador) throws JSDException, PJAException;
+    public abstract void adquirirPropriedade(ImpleJogador jogador) throws LNPSAException, JSDException, PJAException;
     public abstract boolean isPropriedadeAdquirida() throws LNPSAException;
 
 }

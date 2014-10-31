@@ -6,16 +6,16 @@
 
 package ufc.projeto.classes;
 
-import java.util.List;
+import java.util.Iterator;
 
 /**
  *
  * @author S2
  */
 public interface AcoesDoJogo {
-    public void andarCasas(Jogador jogador);
-    public void jogoTerminado(Jogador vencedor);
-    public void atualizarJogo(List<Jogador> listaJogadores);
+    public void andarCasas(ImpleJogador jogador);
+    public void jogoTerminado(ImpleJogador vencedor);
+    public void atualizarJogo(Iterator<ImpleJogador> listaJogadores);
     public boolean aceitaCompra();
-    public void mudarJogadores(Jogador jogadorDaVez);
+    public void mudarJogadores(ImpleJogador jogadorDaVez);
 }

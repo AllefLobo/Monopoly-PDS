@@ -5,6 +5,7 @@
  */
 package ufc.projeto.classes;
 
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -12,12 +13,12 @@ import java.util.List;
  * @author S2
  */
 public class ImpleBancoImobiliario implements BancoImobiliario{
-    private final List<Jogador> listaJogadores;
-    private final Tabuleiro tabuleiro;
+    private final List<ImpleJogador> listaJogadores;
+    private final ImpleTabuleiro tabuleiro;
     private final AcoesDoJogo acoesDoJogo;
-    private Jogador jogadorDestaVez;
+    private ImpleJogador jogadorDestaVez;
 
-    public ImpleBancoImobiliario(List<Jogador> listaJogadores, Tabuleiro tabuleiro, AcoesDoJogo acoesDoJogo) {
+    public ImpleBancoImobiliario(List<ImpleJogador> listaJogadores, ImpleTabuleiro tabuleiro, AcoesDoJogo acoesDoJogo) {
         this.listaJogadores = listaJogadores;
         this.tabuleiro = tabuleiro;
         this.acoesDoJogo = acoesDoJogo;
@@ -57,7 +58,7 @@ public class ImpleBancoImobiliario implements BancoImobiliario{
 		acoesDoJogo.andarCasas(jogadorDestaVez);
 		
 		//chamada a interface para que os campos sejam atualizados
-        acoesDoJogo.atualizarJogo(listaJogadores);
+        acoesDoJogo.atualizarJogo(listaJogadores.iterator());
         
         //mudando a vez do jogador
         mudarVezJogador();
@@ -74,6 +75,15 @@ public class ImpleBancoImobiliario implements BancoImobiliario{
     //busca um logradouro em especifico
 	public Logradouros getInformacaoLogradoEscolhido(int posicao) {
 		return tabuleiro.getLogradouroEspecifico(posicao);
+	}
+	
+	//retorna a lista de logradouros
+	public Iterator<Logradouros> getLogradouros() throws PILException{
+		try{
+			return tabuleiro.getListaLogradouros();
+		}catch(ArrayIndexOutOfBoundsException ex){
+			throw new PILException();
+		}
 	}
         
     

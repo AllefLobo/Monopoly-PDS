@@ -18,7 +18,7 @@ public class AcaoMoverJogador extends AcoesLogradourosEspeciais{
     }
     
     @Override
-    public void AcaoASerRealizada(Jogador jogador) {
+    public void AcaoASerRealizada(ImpleJogador jogador) {
         jogador.setPosicaoAtual(posicaoParaMover);
     }
 }

@@ -17,7 +17,7 @@ public class AcaoModificarDinheiroPositivamente extends AcaoModificarDinheiro{
     }
     
     @Override
-    public void AcaoASerRealizada(Jogador jogador) {
+    public void AcaoASerRealizada(ImpleJogador jogador) {
         jogador.creditar(this.getValor());
     }
     
