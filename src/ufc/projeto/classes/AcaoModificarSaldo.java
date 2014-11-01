@@ -10,10 +10,10 @@ package ufc.projeto.classes;
  *
  * @author S2
  */
-public abstract class AcaoModificarDinheiro extends AcoesLogradourosEspeciais{
+public abstract class AcaoModificarSaldo extends AcoesLogradourosEspeciais{
     private double valor;
 
-    public AcaoModificarDinheiro(double valor) {
+    public AcaoModificarSaldo(double valor) {
         this.valor = valor;
     }
     

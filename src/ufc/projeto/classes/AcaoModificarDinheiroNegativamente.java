@@ -10,7 +10,7 @@ package ufc.projeto.classes;
  *
  * @author S2
  */
-public class AcaoModificarDinheiroNegativamente extends AcaoModificarDinheiro{
+public class AcaoModificarDinheiroNegativamente extends AcaoModificarSaldo{
 
     public AcaoModificarDinheiroNegativamente(double valor) {
         super(valor);
