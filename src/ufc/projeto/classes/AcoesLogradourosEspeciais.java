@@ -6,6 +6,8 @@
 
 package ufc.projeto.classes;
 
+import ufc.projeto.excecoes.JSDException;
+
 /**
  *
  * @author S2

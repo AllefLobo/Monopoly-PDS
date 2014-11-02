@@ -6,6 +6,10 @@
 
 package ufc.projeto.classes;
 
+import ufc.projeto.excecoes.JSDException;
+import ufc.projeto.excecoes.LNPSAException;
+import ufc.projeto.excecoes.PJAException;
+
 /**
  *
  * @author S2

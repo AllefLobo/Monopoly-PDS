@@ -1,10 +1,10 @@
-package ufc.projeto.classes;
+package ufc.projeto.excecoes;
 
 public class PILException extends Exception{
 	
 		@Override
 		public String getMessage() {
-			return "Posição inválida para logradouro";
+			return "Posiï¿½ï¿½o invï¿½lida para logradouro";
 		}
 
 }

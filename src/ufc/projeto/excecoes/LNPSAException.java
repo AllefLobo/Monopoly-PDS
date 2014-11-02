@@ -1,8 +1,8 @@
-package ufc.projeto.classes;
+package ufc.projeto.excecoes;
 
 public class LNPSAException extends Exception{
 	@Override
 	public String getMessage() {
-		return "Esse logradouro não pode ser adquirido.";
+		return "Esse logradouro nï¿½o pode ser adquirido.";
 	}
 }

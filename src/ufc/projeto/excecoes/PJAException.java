@@ -1,4 +1,4 @@
-package ufc.projeto.classes;
+package ufc.projeto.excecoes;
 
 public class PJAException extends Exception{
 

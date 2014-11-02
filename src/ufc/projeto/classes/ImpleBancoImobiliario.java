@@ -8,6 +8,11 @@ package ufc.projeto.classes;
 import java.util.Iterator;
 import java.util.List;
 
+import ufc.projeto.excecoes.JSDException;
+import ufc.projeto.excecoes.LNPSAException;
+import ufc.projeto.excecoes.PILException;
+import ufc.projeto.excecoes.PJAException;
+
 /**
  *
  * @author S2

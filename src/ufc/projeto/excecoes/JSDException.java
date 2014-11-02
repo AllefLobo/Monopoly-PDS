@@ -1,4 +1,4 @@
-package ufc.projeto.classes;
+package ufc.projeto.excecoes;
 
 public class JSDException extends Exception{
 

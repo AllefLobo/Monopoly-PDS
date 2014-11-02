@@ -8,6 +8,9 @@ package ufc.projeto.classes;
 
 import java.util.List;
 
+import ufc.projeto.excecoes.JSDException;
+import ufc.projeto.excecoes.LNPSAException;
+
 /**
  *
  * @author S2
