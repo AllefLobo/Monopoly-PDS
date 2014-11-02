@@ -13,5 +13,5 @@ import ufc.projeto.excecoes.JSDException;
  * @author S2
  */
 public abstract class AcoesLogradourosEspeciais {
-    public abstract void AcaoASerRealizada(ImpleJogador jogador) throws JSDException;
+    public abstract void AcaoASerRealizada(Jogador jogador) throws JSDException;
 }

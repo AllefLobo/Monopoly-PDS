@@ -18,12 +18,12 @@ import ufc.projeto.excecoes.PJAException;
  * @author S2
  */
 public class ImpleBancoImobiliario implements BancoImobiliario{
-    private final List<ImpleJogador> listaJogadores;
-    private final ImpleTabuleiro tabuleiro;
+    private final List<Jogador> listaJogadores;
+    private final Tabuleiro tabuleiro;
     private final AcoesDoJogo acoesDoJogo;
-    private ImpleJogador jogadorDestaVez;
+    private Jogador jogadorDestaVez;
 
-    public ImpleBancoImobiliario(List<ImpleJogador> listaJogadores, ImpleTabuleiro tabuleiro, AcoesDoJogo acoesDoJogo) {
+    public ImpleBancoImobiliario(List<Jogador> listaJogadores, Tabuleiro tabuleiro, AcoesDoJogo acoesDoJogo) {
         this.listaJogadores = listaJogadores;
         this.tabuleiro = tabuleiro;
         this.acoesDoJogo = acoesDoJogo;

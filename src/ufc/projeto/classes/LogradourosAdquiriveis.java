@@ -16,7 +16,7 @@ import ufc.projeto.excecoes.PJAException;
 public abstract class LogradourosAdquiriveis extends Logradouros{
     private double preco;
     private double taxa;
-    private ImpleJogador proprietario;
+    private Jogador proprietario;
     
     public LogradourosAdquiriveis(String nome, String descricao, double preco, double taxa) {
         super(nome, descricao, true);
@@ -29,7 +29,7 @@ public abstract class LogradourosAdquiriveis extends Logradouros{
         return proprietario != null;
     }
     
-    public void adquirirPropriedade(ImpleJogador jogador) throws JSDException, PJAException{
+    public void adquirirPropriedade(Jogador jogador) throws JSDException, PJAException{
         if(!isPropriedadeAdquirida()){
         	if(jogador.getSaldo() >= getPreco()){
         		jogador.debitar(getPreco());
@@ -51,11 +51,11 @@ public abstract class LogradourosAdquiriveis extends Logradouros{
         return this.taxa;
     }
     
-    public void setProprietario(ImpleJogador proprietario){
+    public void setProprietario(Jogador proprietario){
         this.proprietario = proprietario;
     }
     
-    public ImpleJogador getProprietario(){
+    public Jogador getProprietario(){
         return this.proprietario;
     }
 }

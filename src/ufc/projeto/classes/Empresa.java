@@ -20,7 +20,7 @@ public class Empresa extends LogradourosAdquiriveis{
     }
 
     @Override
-    public void realizarAcao(ImpleJogador jogador) throws JSDException, PJAException {
+    public void realizarAcao(Jogador jogador) throws JSDException, PJAException {
       
     	if(isPropriedadeAdquirida()){
             

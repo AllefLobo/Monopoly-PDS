@@ -24,13 +24,13 @@ public class LogradourosEspeciais extends Logradouros{
     }
     
     @Override
-    public void realizarAcao(ImpleJogador jogador) throws JSDException {
+    public void realizarAcao(Jogador jogador) throws JSDException {
         for(AcoesLogradourosEspeciais lista : listaAcoes)
             lista.AcaoASerRealizada(jogador);
     }
 
 	@Override
-	public void adquirirPropriedade(ImpleJogador jogador) throws LNPSAException {
+	public void adquirirPropriedade(Jogador jogador) throws LNPSAException {
 		throw new LNPSAException();
 	}
 

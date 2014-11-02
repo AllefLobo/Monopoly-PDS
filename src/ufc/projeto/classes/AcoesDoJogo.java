@@ -13,9 +13,9 @@ import java.util.Iterator;
  * @author S2
  */
 public interface AcoesDoJogo {
-    public void andarCasas(ImpleJogador jogador);
-    public void jogoTerminado(ImpleJogador vencedor);
-    public void atualizarJogo(Iterator<ImpleJogador> listaJogadores);
+    public void andarCasas(Jogador jogador);
+    public void jogoTerminado(Jogador vencedor);
+    public void atualizarJogo(Iterator<Jogador> listaJogadores);
     public boolean aceitaCompra();
-    public void mudarJogadores(ImpleJogador jogadorDaVez);
+    public void mudarJogadores(Jogador jogadorDaVez);
 }
