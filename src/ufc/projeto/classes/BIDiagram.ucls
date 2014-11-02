@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.6" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
+  realizations="true" associations="true" dependencies="true" nesting-relationships="true">  
+  <interface id="1" language="java" name="ufc.projeto.classes.BancoImobiliario" project="BancoImobiliarioPDS" 
+    file="/BancoImobiliarioPDS/src/ufc/projeto/classes/BancoImobiliario.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="115" width="263" x="928" y="437"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="2" language="java" name="ufc.projeto.classes.ImpleJogador" project="BancoImobiliarioPDS" 
+    file="/BancoImobiliarioPDS/src/ufc/projeto/classes/ImpleJogador.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="367" width="322" x="825" y="1583"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="ufc.projeto.classes.AcaoModificarDinheiroNegativamente" 
+    project="BancoImobiliarioPDS" 
+    file="/BancoImobiliarioPDS/src/ufc/projeto/classes/AcaoModificarDinheiroNegativamente.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="97" width="245" x="17" y="1446"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="ufc.projeto.classes.PILException" project="BancoImobiliarioPDS" 
+    file="/BancoImobiliarioPDS/src/ufc/projeto/classes/PILException.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="97" width="123" x="340" y="592"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="ufc.projeto.classes.ImpleBancoImobiliario" project="BancoImobiliarioPDS" 
+    file="/BancoImobiliarioPDS/src/ufc/projeto/classes/ImpleBancoImobiliario.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="151" width="373" x="888" y="55"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="ufc.projeto.classes.JSDException" project="BancoImobiliarioPDS" 
+    file="/BancoImobiliarioPDS/src/ufc/projeto/classes/JSDException.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="97" width="123" x="-65" y="1583"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="ufc.projeto.classes.LNPSAException" project="BancoImobiliarioPDS" 
+    file="/BancoImobiliarioPDS/src/ufc/projeto/classes/LNPSAException.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="97" width="123" x="665" y="1046"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="ufc.projeto.classes.AcaoModificarDinheiroPositivamente" 
+    project="BancoImobiliarioPDS" 
+    file="/BancoImobiliarioPDS/src/ufc/projeto/classes/AcaoModificarDinheiroPositivamente.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="97" width="239" x="302" y="1446"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="ufc.projeto.classes.Empresa" project="BancoImobiliarioPDS" 
+    file="/BancoImobiliarioPDS/src/ufc/projeto/classes/Empresa.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="97" width="206" x="665" y="1446"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="ufc.projeto.classes.LogradourosAdquiriveis" project="BancoImobiliarioPDS" 
+    file="/BancoImobiliarioPDS/src/ufc/projeto/classes/LogradourosAdquiriveis.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="223" width="275" x="893" y="1183"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="ufc.projeto.classes.Logradouros" project="BancoImobiliarioPDS" 
+    file="/BancoImobiliarioPDS/src/ufc/projeto/classes/Logradouros.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="241" width="216" x="665" y="592"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="ufc.projeto.classes.LogradourosEspeciais" project="BancoImobiliarioPDS" 
+    file="/BancoImobiliarioPDS/src/ufc/projeto/classes/LogradourosEspeciais.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="133" width="363" x="-4" y="873"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="ufc.projeto.classes.AcaoModificarSaldo" project="BancoImobiliarioPDS" 
+    file="/BancoImobiliarioPDS/src/ufc/projeto/classes/AcaoModificarSaldo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="115" width="160" x="146" y="1183"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="14" language="java" name="ufc.projeto.classes.AcoesDoJogo" project="BancoImobiliarioPDS" 
+    file="/BancoImobiliarioPDS/src/ufc/projeto/classes/AcoesDoJogo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="151" width="231" x="-86" y="246"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="15" language="java" name="ufc.projeto.classes.AcoesLogradourosEspeciais" project="BancoImobiliarioPDS" 
+    file="/BancoImobiliarioPDS/src/ufc/projeto/classes/AcoesLogradourosEspeciais.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="97" width="216" x="146" y="1046"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="ufc.projeto.classes.PJAException" project="BancoImobiliarioPDS" 
+    file="/BancoImobiliarioPDS/src/ufc/projeto/classes/PJAException.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="97" width="123" x="1273" y="1583"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="ufc.projeto.classes.Imovel" project="BancoImobiliarioPDS" 
+    file="/BancoImobiliarioPDS/src/ufc/projeto/classes/Imovel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="97" width="194" x="911" y="1446"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="18" language="java" name="ufc.projeto.classes.Jogador" project="BancoImobiliarioPDS" 
+    file="/BancoImobiliarioPDS/src/ufc/projeto/classes/Jogador.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="241" width="322" x="1074" y="1990"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="19" language="java" name="ufc.projeto.classes.LogradouroFactory" project="BancoImobiliarioPDS" 
+    file="/BancoImobiliarioPDS/src/ufc/projeto/classes/LogradouroFactory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="97" width="202" x="665" y="437"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="ufc.projeto.classes.AcaoMoverJogador" project="BancoImobiliarioPDS" 
+    file="/BancoImobiliarioPDS/src/ufc/projeto/classes/AcaoMoverJogador.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="115" width="216" x="346" y="1183"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="ufc.projeto.classes.ImpleTabuleiro" project="BancoImobiliarioPDS" 
+    file="/BancoImobiliarioPDS/src/ufc/projeto/classes/ImpleTabuleiro.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="133" width="243" x="624" y="246"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="22" language="java" name="ufc.projeto.classes.Tabuleiro" project="BancoImobiliarioPDS" 
+    file="/BancoImobiliarioPDS/src/ufc/projeto/classes/Tabuleiro.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="115" width="243" x="361" y="437"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <generalization id="23">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="13"/>  
+  </generalization>  
+  <association id="24">    
+    <bendpoint x="1156" y="1446"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="25" name="logradourosAdquiridos"/>      
+      <multiplicity id="26" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="27">    
+    <bendpoint x="-119" y="246"/>    
+    <bendpoint x="-119" y="437"/>    
+    <bendpoint x="-119" y="592"/>    
+    <bendpoint x="-119" y="873"/>    
+    <bendpoint x="-119" y="1046"/>    
+    <bendpoint x="-119" y="1183"/>    
+    <bendpoint x="-119" y="1446"/>    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <association id="28">    
+    <bendpoint x="1135" y="1446"/>    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="29" name="proprietario"/>      
+      <multiplicity id="30" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="31">    
+    <bendpoint x="571" y="1446"/>    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <dependency id="32">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <dependency id="33">    
+    <bendpoint x="309" y="246"/>    
+    <bendpoint x="309" y="437"/>    
+    <bendpoint x="309" y="592"/>    
+    <bendpoint x="389" y="873"/>    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="34">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="35">    
+    <bendpoint x="1200" y="592"/>    
+    <bendpoint x="1242" y="873"/>    
+    <bendpoint x="1284" y="1046"/>    
+    <bendpoint x="1293" y="1183"/>    
+    <bendpoint x="1303" y="1446"/>    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <generalization id="36">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <dependency id="37">    
+    <bendpoint x="911" y="592"/>    
+    <bendpoint x="911" y="873"/>    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <association id="38">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="39" name="listaAcoes"/>      
+      <multiplicity id="40" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="41">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <realization id="42">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="18"/>  
+  </realization>  
+  <dependency id="43">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <generalization id="44">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <dependency id="45">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="46">    
+    <bendpoint x="613" y="1446"/>    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="47">    
+    <bendpoint x="1240" y="1446"/>    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <dependency id="48">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <realization id="49">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="22"/>  
+  </realization>  
+  <association id="50">    
+    <bendpoint x="1221" y="246"/>    
+    <bendpoint x="1221" y="437"/>    
+    <bendpoint x="1221" y="592"/>    
+    <bendpoint x="1221" y="873"/>    
+    <bendpoint x="1219" y="1046"/>    
+    <bendpoint x="1219" y="1183"/>    
+    <bendpoint x="1219" y="1446"/>    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="51" name="listaJogadores"/>      
+      <multiplicity id="52" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="53">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <dependency id="54">    
+    <bendpoint x="330" y="246"/>    
+    <bendpoint x="330" y="437"/>    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <dependency id="55">    
+    <bendpoint x="674" y="873"/>    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <realization id="56">    
+    <bendpoint x="918" y="246"/>    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <dependency id="57">    
+    <bendpoint x="-77" y="437"/>    
+    <bendpoint x="-77" y="592"/>    
+    <bendpoint x="-77" y="873"/>    
+    <bendpoint x="-77" y="1046"/>    
+    <bendpoint x="-56" y="1183"/>    
+    <bendpoint x="-14" y="1446"/>    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <dependency id="58">    
+    <bendpoint x="1200" y="873"/>    
+    <bendpoint x="1240" y="1046"/>    
+    <bendpoint x="1242" y="1183"/>    
+    <bendpoint x="1282" y="1446"/>    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <dependency id="59">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <association id="60">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="61" name="tabuleiro"/>      
+      <multiplicity id="62" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="63">    
+    <bendpoint x="1179" y="873"/>    
+    <bendpoint x="1188" y="1046"/>    
+    <bendpoint x="1198" y="1183"/>    
+    <bendpoint x="1198" y="1446"/>    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <dependency id="64">    
+    <bendpoint x="1177" y="1583"/>    
+    <bendpoint x="1177" y="1446"/>    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <association id="65">    
+    <bendpoint x="1263" y="246"/>    
+    <bendpoint x="1263" y="437"/>    
+    <bendpoint x="1263" y="592"/>    
+    <bendpoint x="1263" y="873"/>    
+    <bendpoint x="1263" y="1046"/>    
+    <bendpoint x="1263" y="1183"/>    
+    <bendpoint x="1261" y="1446"/>    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="66" name="jogadorDestaVez"/>      
+      <multiplicity id="67" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="68">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <dependency id="69">    
+    <bendpoint x="592" y="1183"/>    
+    <bendpoint x="592" y="1446"/>    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <dependency id="70">    
+    <bendpoint x="897" y="246"/>    
+    <bendpoint x="897" y="437"/>    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <dependency id="71">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <dependency id="72">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <dependency id="73">    
+    <bendpoint x="-14" y="1183"/>    
+    <bendpoint x="-35" y="1446"/>    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="74">    
+    <bendpoint x="634" y="1046"/>    
+    <bendpoint x="634" y="1183"/>    
+    <bendpoint x="634" y="1446"/>    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <dependency id="75">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="76">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <association id="77">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="78" name="acoesDoJogo"/>      
+      <multiplicity id="79" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="80">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <dependency id="81">    
+    <bendpoint x="1324" y="246"/>    
+    <bendpoint x="1324" y="437"/>    
+    <bendpoint x="1324" y="592"/>    
+    <bendpoint x="1324" y="873"/>    
+    <bendpoint x="1324" y="1046"/>    
+    <bendpoint x="1324" y="1183"/>    
+    <bendpoint x="1324" y="1446"/>    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <dependency id="82">    
+    <bendpoint x="493" y="592"/>    
+    <bendpoint x="-56" y="873"/>    
+    <bendpoint x="-98" y="1046"/>    
+    <bendpoint x="-98" y="1183"/>    
+    <bendpoint x="-98" y="1446"/>    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <generalization id="83">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="13"/>  
+  </generalization>  
+  <dependency id="84">    
+    <bendpoint x="-35" y="1046"/>    
+    <bendpoint x="-35" y="1183"/>    
+    <bendpoint x="-56" y="1446"/>    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <association id="85">    
+    <bendpoint x="634" y="437"/>    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="86" name="listaLogradouros"/>      
+      <multiplicity id="87" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="88">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <generalization id="89">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <generalization id="90">    
+    <bendpoint x="932" y="1046"/>    
+    <bendpoint x="932" y="873"/>    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <generalization id="91">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <dependency id="92">    
+    <bendpoint x="-35" y="873"/>    
+    <bendpoint x="-56" y="1046"/>    
+    <bendpoint x="-77" y="1183"/>    
+    <bendpoint x="-77" y="1446"/>    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
