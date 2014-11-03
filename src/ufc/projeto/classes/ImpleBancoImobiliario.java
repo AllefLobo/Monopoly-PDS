@@ -8,10 +8,11 @@ package ufc.projeto.classes;
 import java.util.Iterator;
 import java.util.List;
 
-import ufc.projeto.excecoes.JSDException;
-import ufc.projeto.excecoes.LNPSAException;
-import ufc.projeto.excecoes.PILException;
-import ufc.projeto.excecoes.PJAException;
+import ufc.projeto.excecoes.JogadorSemSaldoException;
+import ufc.projeto.excecoes.LogradouroNaoPodeSerAdquiridoException;
+import ufc.projeto.excecoes.LogradouroSemPreco;
+import ufc.projeto.excecoes.PosicaoIvalidaParaLogradouroException;
+import ufc.projeto.excecoes.PropriedadeJaAdquiridaException;
 
 /**
  *
@@ -31,7 +32,7 @@ public class ImpleBancoImobiliario implements BancoImobiliario{
         acoesDoJogo.mudarJogadores(jogadorDestaVez);
     }
    
-    public void jogarAVez(int numeroDados) throws LNPSAException, JSDException, PJAException{
+    public void jogarAVez(int numeroDados) throws LogradouroNaoPodeSerAdquiridoException, JogadorSemSaldoException, PropriedadeJaAdquiridaException, LogradouroSemPreco{
     	//mudando posicao do jogador
         jogadorDestaVez.setPosicaoAtual(numeroDados);
         
@@ -39,13 +40,13 @@ public class ImpleBancoImobiliario implements BancoImobiliario{
         acoesDoJogo.andarCasas(jogadorDestaVez);
         
         //obtendo o logradouro
-        Logradouros logradouroAtual = getInformacaoLogradoEscolhido(jogadorDestaVez.getPosicaoAtual());
+        Logradouro logradouroAtual = getInformacaoLogradoEscolhido(jogadorDestaVez.getPosicaoAtual());
         
         //verificando se o logradouro é adquirivel
-        if(logradouroAtual.isAdquirivel()){
+        if(logradouroAtual.eAdquirivel()){
         	
         	//verificando se a propriedade já está adquirida
-        	if(!logradouroAtual.isPropriedadeAdquirida()){
+        	if(!logradouroAtual.ePropriedadeAdquirida()){
         		 boolean resposta = acoesDoJogo.aceitaCompra();
         		 if(resposta){
         			 logradouroAtual.adquirirPropriedade(jogadorDestaVez);
@@ -78,16 +79,16 @@ public class ImpleBancoImobiliario implements BancoImobiliario{
     }
 
     //busca um logradouro em especifico
-	public Logradouros getInformacaoLogradoEscolhido(int posicao) {
+	public Logradouro getInformacaoLogradoEscolhido(int posicao) {
 		return tabuleiro.getLogradouroEspecifico(posicao);
 	}
 	
 	//retorna a lista de logradouros
-	public Iterator<Logradouros> getLogradouros() throws PILException{
+	public Iterator<Logradouro> getLogradouros() throws PosicaoIvalidaParaLogradouroException{
 		try{
 			return tabuleiro.getListaLogradouros();
 		}catch(ArrayIndexOutOfBoundsException ex){
-			throw new PILException();
+			throw new PosicaoIvalidaParaLogradouroException();
 		}
 	}
         

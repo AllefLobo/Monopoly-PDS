@@ -12,7 +12,7 @@ package ufc.projeto.classes;
  */
 public class LogradouroFactory {
     
-    public Logradouros getLogradouros(String tipoLogradouro){
+    public Logradouro getLogradouros(String tipoLogradouro){
         if(tipoLogradouro == null) return null;
         //else if(tipoLogradouro.equals("Empresa")) return new Empresa(tipoLogradouro, tipoLogradouro, preco, taxa)j
         return null;

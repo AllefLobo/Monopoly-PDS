@@ -8,10 +8,11 @@ package ufc.projeto.classes;
 
 import java.util.Iterator;
 
-import ufc.projeto.excecoes.JSDException;
-import ufc.projeto.excecoes.LNPSAException;
-import ufc.projeto.excecoes.PILException;
-import ufc.projeto.excecoes.PJAException;
+import ufc.projeto.excecoes.JogadorSemSaldoException;
+import ufc.projeto.excecoes.LogradouroNaoPodeSerAdquiridoException;
+import ufc.projeto.excecoes.LogradouroSemPreco;
+import ufc.projeto.excecoes.PosicaoIvalidaParaLogradouroException;
+import ufc.projeto.excecoes.PropriedadeJaAdquiridaException;
 
 /**
  *
@@ -19,7 +20,7 @@ import ufc.projeto.excecoes.PJAException;
  */
 public interface BancoImobiliario {
     
-    public void jogarAVez(int numeroDados) throws LNPSAException, JSDException, PJAException;
-    public Logradouros getInformacaoLogradoEscolhido(int posicao);
-    public Iterator<Logradouros> getLogradouros() throws PILException;
+    public void jogarAVez(int numeroDados) throws LogradouroNaoPodeSerAdquiridoException, JogadorSemSaldoException, PropriedadeJaAdquiridaException, LogradouroSemPreco;
+    public Logradouro getInformacaoLogradoEscolhido(int posicao);
+    public Iterator<Logradouro> getLogradouros() throws PosicaoIvalidaParaLogradouroException;
 }

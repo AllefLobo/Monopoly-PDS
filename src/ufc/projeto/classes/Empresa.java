@@ -6,8 +6,8 @@
 
 package ufc.projeto.classes;
 
-import ufc.projeto.excecoes.JSDException;
-import ufc.projeto.excecoes.PJAException;
+import ufc.projeto.excecoes.JogadorSemSaldoException;
+import ufc.projeto.excecoes.PropriedadeJaAdquiridaException;
 
 /**
  *
@@ -20,9 +20,9 @@ public class Empresa extends LogradourosAdquiriveis{
     }
 
     @Override
-    public void realizarAcao(Jogador jogador) throws JSDException, PJAException {
+    public void realizarAcao(Jogador jogador) throws JogadorSemSaldoException, PropriedadeJaAdquiridaException {
       
-    	if(isPropriedadeAdquirida()){
+    	if(ePropriedadeAdquirida()){
             
     		if(!jogador.equals(getProprietario())){
                
@@ -31,13 +31,13 @@ public class Empresa extends LogradourosAdquiriveis{
                 	jogador.debitar(valorCobrarAdquirir);
                 	getProprietario().creditar(valorCobrarAdquirir);
                 }else
-                	throw new JSDException();
+                	throw new JogadorSemSaldoException();
         }else{
-        	throw new PJAException();
+        	throw new PropriedadeJaAdquiridaException();
         }
     }
 
-  
-    
 }
+	@Override
+	public void passeiPorEsseLogradouro(Jogador jogador) {}
 }

@@ -8,14 +8,16 @@ package ufc.projeto.classes;
 
 import java.util.List;
 
-import ufc.projeto.excecoes.JSDException;
-import ufc.projeto.excecoes.LNPSAException;
+import ufc.projeto.excecoes.JogadorSemSaldoException;
+import ufc.projeto.excecoes.LogradouroNaoPodeSerAdquiridoException;
+import ufc.projeto.excecoes.LogradouroSemPreco;
+import ufc.projeto.excecoes.LogradouroSemTaxa;
 
 /**
  *
  * @author S2
  */
-public class LogradourosEspeciais extends Logradouros{
+public class LogradourosEspeciais extends Logradouro{
     private List<AcoesLogradourosEspeciais> listaAcoes;
     
     public LogradourosEspeciais(String nome, String descricao, List<AcoesLogradourosEspeciais> listaAcoes) {
@@ -24,19 +26,34 @@ public class LogradourosEspeciais extends Logradouros{
     }
     
     @Override
-    public void realizarAcao(Jogador jogador) throws JSDException {
+    public void realizarAcao(Jogador jogador) throws JogadorSemSaldoException {
         for(AcoesLogradourosEspeciais lista : listaAcoes)
             lista.AcaoASerRealizada(jogador);
     }
 
 	@Override
-	public void adquirirPropriedade(Jogador jogador) throws LNPSAException {
-		throw new LNPSAException();
+	public void adquirirPropriedade(Jogador jogador) throws LogradouroNaoPodeSerAdquiridoException {
+		throw new LogradouroNaoPodeSerAdquiridoException();
 	}
 
 	@Override
-	public boolean isPropriedadeAdquirida() throws LNPSAException {
-		throw new LNPSAException();
+	public boolean ePropriedadeAdquirida() throws LogradouroNaoPodeSerAdquiridoException {
+		throw new LogradouroNaoPodeSerAdquiridoException();
+	}
+
+	@Override
+	public void passeiPorEsseLogradouro(Jogador jogador) {
+		
+	}
+
+	@Override
+	public double obterPreco() throws LogradouroSemPreco {
+		throw new LogradouroSemPreco();
+	}
+
+	@Override
+	public double obterTaxa() throws LogradouroSemTaxa {
+		throw new LogradouroSemTaxa();
 	}
     
 }

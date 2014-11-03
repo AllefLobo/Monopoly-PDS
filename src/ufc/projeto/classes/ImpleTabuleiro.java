@@ -14,13 +14,13 @@ import java.util.List;
  * @author S2
  */
 public class ImpleTabuleiro implements Tabuleiro{
-    private List<Logradouros> listaLogradouros;
+    private List<Logradouro> listaLogradouros;
 
-    public ImpleTabuleiro(List<Logradouros> listaLogradouros) {
+    public ImpleTabuleiro(List<Logradouro> listaLogradouros) {
         this.listaLogradouros = listaLogradouros;
     }
     
-    public Logradouros getLogradouroEspecifico(int posicao) throws ArrayIndexOutOfBoundsException{
+    public Logradouro getLogradouroEspecifico(int posicao) throws ArrayIndexOutOfBoundsException{
             return listaLogradouros.get(posicao);
     }
     
@@ -28,7 +28,7 @@ public class ImpleTabuleiro implements Tabuleiro{
         return listaLogradouros.size();
     }
     
-    public Iterator<Logradouros> getListaLogradouros(){
+    public Iterator<Logradouro> getListaLogradouros(){
         return listaLogradouros.iterator();
     }
     

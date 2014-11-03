@@ -6,8 +6,8 @@
 
 package ufc.projeto.classes;
 
-import ufc.projeto.excecoes.JSDException;
-import ufc.projeto.excecoes.PJAException;
+import ufc.projeto.excecoes.JogadorSemSaldoException;
+import ufc.projeto.excecoes.PropriedadeJaAdquiridaException;
 
 /**
  *
@@ -20,19 +20,22 @@ public class Imovel extends LogradourosAdquiriveis{
     }
 
     @Override
-    public void realizarAcao(Jogador jogador) throws PJAException, JSDException {
+    public void realizarAcao(Jogador jogador) throws PropriedadeJaAdquiridaException, JogadorSemSaldoException {
        
-    	if(isPropriedadeAdquirida()){
+    	if(ePropriedadeAdquirida()){
             if(!jogador.equals(getProprietario())){
             	if(jogador.getSaldo() >= getTaxa()){
             		jogador.debitar(getTaxa());
                 	getProprietario().creditar(getTaxa());
             	}else{
-            		throw new JSDException();
+            		throw new JogadorSemSaldoException();
             	}
             }
         }else{
-        	throw new PJAException();
+        	throw new PropriedadeJaAdquiridaException();
         }
     }
+
+	@Override
+	public void passeiPorEsseLogradouro(Jogador jogador) {}
 }

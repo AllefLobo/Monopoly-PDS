@@ -6,14 +6,15 @@
 
 package ufc.projeto.classes;
 
-import ufc.projeto.excecoes.JSDException;
-import ufc.projeto.excecoes.PJAException;
+import ufc.projeto.excecoes.JogadorSemSaldoException;
+import ufc.projeto.excecoes.LogradouroSemPreco;
+import ufc.projeto.excecoes.PropriedadeJaAdquiridaException;
 
 /**
  *
  * @author S2
  */
-public abstract class LogradourosAdquiriveis extends Logradouros{
+public abstract class LogradourosAdquiriveis extends Logradouro{
     private double preco;
     private double taxa;
     private Jogador proprietario;
@@ -25,27 +26,24 @@ public abstract class LogradourosAdquiriveis extends Logradouros{
     }
     
     @Override
-    public boolean isPropriedadeAdquirida(){
+    public boolean ePropriedadeAdquirida(){
         return proprietario != null;
     }
     
-    public void adquirirPropriedade(Jogador jogador) throws JSDException, PJAException{
-        if(!isPropriedadeAdquirida()){
-        	if(jogador.getSaldo() >= getPreco()){
-        		jogador.debitar(getPreco());
+    public void adquirirPropriedade(Jogador jogador) throws JogadorSemSaldoException, PropriedadeJaAdquiridaException{
+        if(!ePropriedadeAdquirida()){
+        	if(jogador.getSaldo() >= this.preco){
+        		jogador.debitar(this.preco);
         		jogador.adicionarLogradouro(this);
         		setProprietario(jogador);
         	}else{
-        		throw new JSDException();
+        		throw new JogadorSemSaldoException();
         	}
         }else{
-            throw new PJAException();
+            throw new PropriedadeJaAdquiridaException();
         }
     }
     
-    public double getPreco(){
-        return this.preco;
-    }
     
     public double getTaxa(){
         return this.taxa;
@@ -58,4 +56,14 @@ public abstract class LogradourosAdquiriveis extends Logradouros{
     public Jogador getProprietario(){
         return this.proprietario;
     }
+    
+    @Override
+    public double obterPreco() throws LogradouroSemPreco {
+    	return obterPreco();
+    }
+    
+    @Override
+	public double obterTaxa() {
+		return getTaxa();
+	}
 }

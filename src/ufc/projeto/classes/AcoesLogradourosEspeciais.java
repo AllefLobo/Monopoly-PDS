@@ -6,12 +6,12 @@
 
 package ufc.projeto.classes;
 
-import ufc.projeto.excecoes.JSDException;
+import ufc.projeto.excecoes.JogadorSemSaldoException;
 
 /**
  *
  * @author S2
  */
 public abstract class AcoesLogradourosEspeciais {
-    public abstract void AcaoASerRealizada(Jogador jogador) throws JSDException;
+    public abstract void AcaoASerRealizada(Jogador jogador) throws JogadorSemSaldoException;
 }

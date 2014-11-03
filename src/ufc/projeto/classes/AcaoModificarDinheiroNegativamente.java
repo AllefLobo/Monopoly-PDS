@@ -6,7 +6,7 @@
 
 package ufc.projeto.classes;
 
-import ufc.projeto.excecoes.JSDException;
+import ufc.projeto.excecoes.JogadorSemSaldoException;
 
 /**
  *
@@ -19,11 +19,11 @@ public class AcaoModificarDinheiroNegativamente extends AcaoModificarSaldo{
     }
     
     @Override
-    public void AcaoASerRealizada(Jogador jogador) throws JSDException{
+    public void AcaoASerRealizada(Jogador jogador) throws JogadorSemSaldoException{
     	if(jogador.getSaldo() >= getValor()){
     		jogador.debitar(this.getValor());
     	}else{
-    		throw new JSDException();
+    		throw new JogadorSemSaldoException();
     	}
     }
     
