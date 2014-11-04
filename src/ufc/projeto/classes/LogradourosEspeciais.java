@@ -6,8 +6,7 @@
 
 package ufc.projeto.classes;
 
-import java.util.List;
-
+import java.util.Iterator;
 import ufc.projeto.excecoes.JogadorSemSaldoException;
 import ufc.projeto.excecoes.LogradouroNaoPodeSerAdquiridoException;
 import ufc.projeto.excecoes.LogradouroSemPreco;
@@ -18,21 +17,23 @@ import ufc.projeto.excecoes.LogradouroSemTaxa;
  * @author S2
  */
 public class LogradourosEspeciais extends Logradouro{
-    private List<AcoesLogradourosEspeciais> listaAcoes;
+    private Iterator<AcoesLogradourosEspeciais> listaAcoes;
     
-    public LogradourosEspeciais(String nome, String descricao, List<AcoesLogradourosEspeciais> listaAcoes) {
+    public LogradourosEspeciais(String nome, String descricao, Iterator<AcoesLogradourosEspeciais> listaAcoes) {
         super(nome, descricao, false);
         this.listaAcoes = listaAcoes;
     }
     
     @Override
     public void realizarAcao(Jogador jogador) throws JogadorSemSaldoException {
-        for(AcoesLogradourosEspeciais lista : listaAcoes)
-            lista.AcaoASerRealizada(jogador);
+        for(Iterator<AcoesLogradourosEspeciais> lista = listaAcoes; listaAcoes.hasNext();){
+            ((AcoesLogradourosEspeciais) lista).AcaoASerRealizada(jogador);
+        }
     }
 
 	@Override
 	public void adquirirPropriedade(Jogador jogador) throws LogradouroNaoPodeSerAdquiridoException {
+
 		throw new LogradouroNaoPodeSerAdquiridoException();
 	}
 
