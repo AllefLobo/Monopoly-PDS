@@ -8,8 +8,8 @@ package ufc.projeto.classes;
 
 import ufc.projeto.excecoes.JogadorSemSaldoException;
 import ufc.projeto.excecoes.LogradouroNaoPodeSerAdquiridoException;
-import ufc.projeto.excecoes.LogradouroSemPreco;
-import ufc.projeto.excecoes.LogradouroSemTaxa;
+import ufc.projeto.excecoes.LogradouroSemPrecoException;
+import ufc.projeto.excecoes.LogradouroSemTaxaException;
 import ufc.projeto.excecoes.PropriedadeJaAdquiridaException;
 
 /**
@@ -40,9 +40,9 @@ public abstract class Logradouro {
     }
 
     public abstract void realizarAcao(Jogador jogador) throws JogadorSemSaldoException, PropriedadeJaAdquiridaException;
-    public abstract void adquirirPropriedade(Jogador jogador) throws LogradouroNaoPodeSerAdquiridoException, JogadorSemSaldoException, PropriedadeJaAdquiridaException, LogradouroSemPreco;
+    public abstract void adquirirPropriedade(Jogador jogador) throws LogradouroNaoPodeSerAdquiridoException, JogadorSemSaldoException, PropriedadeJaAdquiridaException, LogradouroSemPrecoException;
     public abstract boolean ePropriedadeAdquirida() throws LogradouroNaoPodeSerAdquiridoException;
     public abstract void passeiPorEsseLogradouro(Jogador jogador);
-    public abstract double obterPreco() throws LogradouroSemPreco;
-    public abstract double obterTaxa() throws LogradouroSemTaxa;
+    public abstract double obterPreco() throws LogradouroSemPrecoException;
+    public abstract double obterTaxa() throws LogradouroSemTaxaException;
 }

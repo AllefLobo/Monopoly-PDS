@@ -10,7 +10,7 @@ import java.util.List;
 
 import ufc.projeto.excecoes.JogadorSemSaldoException;
 import ufc.projeto.excecoes.LogradouroNaoPodeSerAdquiridoException;
-import ufc.projeto.excecoes.LogradouroSemPreco;
+import ufc.projeto.excecoes.LogradouroSemPrecoException;
 import ufc.projeto.excecoes.PosicaoIvalidaParaLogradouroException;
 import ufc.projeto.excecoes.PropriedadeJaAdquiridaException;
 
@@ -32,7 +32,7 @@ public class ImpleBancoImobiliario implements BancoImobiliario{
         acoesDoJogo.mudarJogadores(jogadorDestaVez);
     }
    
-    public void jogarAVez(int numeroDados) throws LogradouroNaoPodeSerAdquiridoException, JogadorSemSaldoException, PropriedadeJaAdquiridaException, LogradouroSemPreco{
+    public void jogarAVez(int numeroDados) throws LogradouroNaoPodeSerAdquiridoException, JogadorSemSaldoException, PropriedadeJaAdquiridaException, LogradouroSemPrecoException{
     	//mudando posicao do jogador
         jogadorDestaVez.setPosicaoAtual(numeroDados);
         

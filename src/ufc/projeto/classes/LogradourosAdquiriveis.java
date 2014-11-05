@@ -7,7 +7,7 @@
 package ufc.projeto.classes;
 
 import ufc.projeto.excecoes.JogadorSemSaldoException;
-import ufc.projeto.excecoes.LogradouroSemPreco;
+import ufc.projeto.excecoes.LogradouroSemPrecoException;
 import ufc.projeto.excecoes.PropriedadeJaAdquiridaException;
 
 /**
@@ -45,10 +45,6 @@ public abstract class LogradourosAdquiriveis extends Logradouro{
     }
     
     
-    public double getTaxa(){
-        return this.taxa;
-    }
-    
     public void setProprietario(Jogador proprietario){
         this.proprietario = proprietario;
     }
@@ -58,12 +54,12 @@ public abstract class LogradourosAdquiriveis extends Logradouro{
     }
     
     @Override
-    public double obterPreco() throws LogradouroSemPreco {
-    	return obterPreco();
+    public double obterPreco() throws LogradouroSemPrecoException {
+    	return this.preco;
     }
     
     @Override
 	public double obterTaxa() {
-		return getTaxa();
+		return taxa;
 	}
 }

@@ -28,13 +28,13 @@ public class LogradouroPontoDePartida extends Logradouro{
 	}
 
 	@Override
-	public double obterPreco() throws LogradouroSemPreco {
-		throw new LogradouroSemPreco();
+	public double obterPreco() throws LogradouroSemPrecoException {
+		throw new LogradouroSemPrecoException();
 	}
 
 	@Override
-	public double obterTaxa() throws LogradouroSemTaxa {
-		throw new LogradouroSemTaxa();
+	public double obterTaxa() throws LogradouroSemTaxaException {
+		throw new LogradouroSemTaxaException();
 	}
 
 }

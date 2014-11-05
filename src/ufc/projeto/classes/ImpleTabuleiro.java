@@ -15,10 +15,10 @@ import java.util.List;
  */
 public class ImpleTabuleiro implements Tabuleiro{
     private List<Logradouro> listaLogradouros;
-
-    public ImpleTabuleiro(List<Logradouro> listaLogradouros) {
-        this.listaLogradouros = listaLogradouros;
-    }
+    
+    public ImpleTabuleiro() {
+		listaLogradouros = new DiretorLogradouro().getLogradouros();
+	}
     
     public Logradouro getLogradouroEspecifico(int posicao) throws ArrayIndexOutOfBoundsException{
             return listaLogradouros.get(posicao);

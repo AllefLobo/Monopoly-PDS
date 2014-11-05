@@ -24,9 +24,9 @@ public class Imovel extends LogradourosAdquiriveis{
        
     	if(ePropriedadeAdquirida()){
             if(!jogador.equals(getProprietario())){
-            	if(jogador.getSaldo() >= getTaxa()){
-            		jogador.debitar(getTaxa());
-                	getProprietario().creditar(getTaxa());
+            	if(jogador.getSaldo() >= obterTaxa()){
+            		jogador.debitar(obterTaxa());
+                	getProprietario().creditar(obterTaxa());
             	}else{
             		throw new JogadorSemSaldoException();
             	}

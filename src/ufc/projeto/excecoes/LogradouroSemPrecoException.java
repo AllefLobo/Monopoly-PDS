@@ -1,6 +1,6 @@
 package ufc.projeto.excecoes;
 
-public class LogradouroSemPreco extends Exception{
+public class LogradouroSemPrecoException extends Exception{
 
 	@Override
 	public String getMessage() {

@@ -9,8 +9,8 @@ package ufc.projeto.classes;
 import java.util.Iterator;
 import ufc.projeto.excecoes.JogadorSemSaldoException;
 import ufc.projeto.excecoes.LogradouroNaoPodeSerAdquiridoException;
-import ufc.projeto.excecoes.LogradouroSemPreco;
-import ufc.projeto.excecoes.LogradouroSemTaxa;
+import ufc.projeto.excecoes.LogradouroSemPrecoException;
+import ufc.projeto.excecoes.LogradouroSemTaxaException;
 
 /**
  *
@@ -48,13 +48,13 @@ public class LogradourosEspeciais extends Logradouro{
 	}
 
 	@Override
-	public double obterPreco() throws LogradouroSemPreco {
-		throw new LogradouroSemPreco();
+	public double obterPreco() throws LogradouroSemPrecoException {
+		throw new LogradouroSemPrecoException();
 	}
 
 	@Override
-	public double obterTaxa() throws LogradouroSemTaxa {
-		throw new LogradouroSemTaxa();
+	public double obterTaxa() throws LogradouroSemTaxaException {
+		throw new LogradouroSemTaxaException();
 	}
     
 }
