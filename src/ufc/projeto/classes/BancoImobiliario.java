@@ -20,7 +20,7 @@ import ufc.projeto.excecoes.PropriedadeJaAdquiridaException;
  */
 public interface BancoImobiliario {
     
-    public void jogarAVez(int numeroDados) throws LogradouroNaoPodeSerAdquiridoException, JogadorSemSaldoException, PropriedadeJaAdquiridaException, LogradouroSemPrecoException;
-    public Logradouro getInformacaoLogradoEscolhido(int posicao);
-    public Iterator<Logradouro> getLogradouros() throws PosicaoIvalidaParaLogradouroException;
+    public void jogarAVez(int numeroDados) throws LogradouroNaoPodeSerAdquiridoException, JogadorSemSaldoException, PropriedadeJaAdquiridaException, LogradouroSemPrecoException, PosicaoIvalidaParaLogradouroException;
+    public Logradouro getInformacaoLogradoEscolhido(int posicao) throws PosicaoIvalidaParaLogradouroException;
+    public Iterator<Logradouro> getLogradouros();
 }

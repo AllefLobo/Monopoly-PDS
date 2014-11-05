@@ -27,7 +27,7 @@ public class LogradourosEspeciais extends Logradouro{
     @Override
     public void realizarAcao(Jogador jogador) throws JogadorSemSaldoException {
         for(Iterator<AcoesLogradourosEspeciais> lista = listaAcoes; listaAcoes.hasNext();){
-            ((AcoesLogradourosEspeciais) lista).AcaoASerRealizada(jogador);
+           lista.next().AcaoASerRealizada(jogador);
         }
     }
 

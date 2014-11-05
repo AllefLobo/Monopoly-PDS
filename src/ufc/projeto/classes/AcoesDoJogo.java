@@ -16,6 +16,6 @@ public interface AcoesDoJogo {
     public void andarCasas(Jogador jogador);
     public void jogoTerminado(Jogador vencedor);
     public void atualizarJogo(Iterator<Jogador> listaJogadores);
-    public boolean aceitaCompra();
+    public boolean aceitaCompra(Logradouro logradouro);
     public void mudarJogadores(Jogador jogadorDaVez);
 }

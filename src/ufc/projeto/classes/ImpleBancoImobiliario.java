@@ -32,9 +32,12 @@ public class ImpleBancoImobiliario implements BancoImobiliario{
         acoesDoJogo.mudarJogadores(jogadorDestaVez);
     }
    
-    public void jogarAVez(int numeroDados) throws LogradouroNaoPodeSerAdquiridoException, JogadorSemSaldoException, PropriedadeJaAdquiridaException, LogradouroSemPrecoException{
+    public void jogarAVez(int numeroDados) throws LogradouroNaoPodeSerAdquiridoException, JogadorSemSaldoException, PropriedadeJaAdquiridaException, LogradouroSemPrecoException, PosicaoIvalidaParaLogradouroException{
     	//mudando posicao do jogador
         jogadorDestaVez.setPosicaoAtual(numeroDados);
+        
+        //modificando o valor atual dos dados!
+        jogadorDestaVez.atualizarValorDados(numeroDados);
         
         //mandando um sinal para interface mudar o jogador
         acoesDoJogo.andarCasas(jogadorDestaVez);
@@ -47,7 +50,7 @@ public class ImpleBancoImobiliario implements BancoImobiliario{
         	
         	//verificando se a propriedade já está adquirida
         	if(!logradouroAtual.ePropriedadeAdquirida()){
-        		 boolean resposta = acoesDoJogo.aceitaCompra();
+        		 boolean resposta = acoesDoJogo.aceitaCompra(logradouroAtual);
         		 if(resposta){
         			 logradouroAtual.adquirirPropriedade(jogadorDestaVez);
         		 }
@@ -74,22 +77,19 @@ public class ImpleBancoImobiliario implements BancoImobiliario{
     private void mudarVezJogador(){
         int posicaoDoAtualJogadorDaVezNaLista = listaJogadores.indexOf(jogadorDestaVez);
         int proximaPosicao = posicaoDoAtualJogadorDaVezNaLista+1;
-        jogadorDestaVez = listaJogadores.get(proximaPosicao/listaJogadores.size());
+        int posicaoDoProximoJogador = (proximaPosicao%listaJogadores.size());
+        jogadorDestaVez = listaJogadores.get(posicaoDoProximoJogador);
         acoesDoJogo.mudarJogadores(jogadorDestaVez);
     }
 
     //busca um logradouro em especifico
-	public Logradouro getInformacaoLogradoEscolhido(int posicao) {
+	public Logradouro getInformacaoLogradoEscolhido(int posicao) throws PosicaoIvalidaParaLogradouroException{
 		return tabuleiro.getLogradouroEspecifico(posicao);
 	}
 	
 	//retorna a lista de logradouros
-	public Iterator<Logradouro> getLogradouros() throws PosicaoIvalidaParaLogradouroException{
-		try{
+	public Iterator<Logradouro> getLogradouros(){
 			return tabuleiro.getListaLogradouros();
-		}catch(ArrayIndexOutOfBoundsException ex){
-			throw new PosicaoIvalidaParaLogradouroException();
-		}
 	}
         
     

@@ -6,6 +6,7 @@
 
 package ufc.projeto.classes;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -27,6 +28,7 @@ public class ImpleJogador implements Jogador{
         this.valorDados = 0;
         this.posicaoAtual = 0;
         this.totalDeCasas = totalDeCasas;
+        logradourosAdquiridos = new ArrayList<LogradourosAdquiriveis>();
     }
     
     private int retornandoPosicaoCorretaNoTabuleiro(int numeroDados){
